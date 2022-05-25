@@ -78,7 +78,7 @@ from the commandline.
 The script was developed/tested on Linux, but should probably work
 just fine on any platform which can run Python.
 
-## Dependencies
+### Dependencies
 
 The project makes use of the following:
  - `chardet`: https://pypi.org/project/chardet/
