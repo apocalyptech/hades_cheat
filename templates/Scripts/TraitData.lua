@@ -21234,7 +21234,7 @@ TraitData =
 			{
 				WeaponNames = { "SwordThrustWave" },
 				ProjectileProperty = "DamageLow",
-				BaseValue = 30,
+				BaseValue = @damage_scale|30@,
 				ChangeType = "Absolute",
 				ExcludeLinked = true,
 				ExtractValue =
@@ -21550,7 +21550,7 @@ TraitData =
 			{
 				WeaponNames = {"SwordWeapon", "SwordWeapon2", },
 				ProjectileProperty = "DamageLow",
-				ChangeValue = 25,
+				ChangeValue = @damage_scale|25@,
 				ChangeType = "Absolute",
 				ExcludeLinked = true,
 				ExtractValue =
@@ -21729,7 +21729,7 @@ TraitData =
 			{
 				WeaponName = "SwordWeapon2",
 				ProjectileProperty = "DamageLow",
-				ChangeValue = 90,
+				ChangeValue = @damage_scale|90@,
 				ChangeType = "Absolute",
 				ExcludeLinked = true,
 				ExtractValue =
@@ -25279,7 +25279,7 @@ TraitData =
 				WeaponNames = { "ShieldThrow", "ShieldThrowDash" },
 				ProjectileName = "ShieldCatchBlast",
 				ProjectileProperty = "DamageLow",
-				BaseValue = 50,
+				BaseValue = @damage_scale|50@,
 				ChangeType = "Absolute",
 				ExtractValue =
 				{
@@ -25459,7 +25459,7 @@ TraitData =
 			{
 				WeaponNames = { "ShieldWeaponRush" },
 				ProjectileProperty = "DamageLow",
-				ChangeValue = 80,
+				ChangeValue = @damage_scale|80@,
 				ChangeType = "Absolute",
 				ExcludeLinked = true,
 				ExtractValue =
@@ -27390,7 +27390,7 @@ TraitData =
 			{
 				WeaponNames = { "SpearWeaponThrow" },
 				ProjectileProperty = "DamageLow",
-				ChangeValue = 50,
+				ChangeValue = @damage_scale|50@,
 				ChangeType = "Absolute",
 				ExcludeLinked = true,
 				ExtractValue =
@@ -28789,7 +28789,7 @@ TraitData =
 			{
 				WeaponNames = { "SpearWeaponSpinExplosiveChargeWeapon" },
 				ProjectileProperty = "DamageLow",
-				BaseValue = 40,
+				BaseValue = @damage_scale|40@,
 				ChangeType = "Absolute",
 				ExcludeLinked = true,
 				ExtractValue =
@@ -29563,7 +29563,7 @@ TraitData =
 			{
 				WeaponNames = { "GunWeapon", "GunWeaponDash" },
 				ProjectileProperty = "DamageLow",
-				ChangeValue = 40,
+				ChangeValue = @damage_scale|40@,
 				ChangeType = "Absolute",
 				ExcludeLinked = true,
 				ExtractValue =
@@ -30286,7 +30286,7 @@ TraitData =
 				WeaponNames = { "GunGrenadeToss" },
 				ExcludeProjectileName = "GunGrenadeSelfDamage",
 				ProjectileProperty = "DamageLow",
-				ChangeValue = 80,
+				ChangeValue = @damage_scale|80@,
 				ChangeType = "Absolute",
 				ExcludeLinked = true,
 				ExtractValue =
@@ -31437,7 +31437,7 @@ TraitData =
 			{
 				WeaponNames = { "FistWeapon", "FistWeapon2", "FistWeapon3", "FistWeapon4", "FistWeapon5" },
 				ProjectileProperty = "DamageLow",
-				ChangeValue = 40,
+				ChangeValue = @damage_scale|40@,
 				ChangeType = "Absolute",
 				ExcludeLinked = true,
 				ExtractValue =
@@ -32859,7 +32859,7 @@ TraitData =
 			{
 				WeaponNames = { "FistWeaponSpecial" },
 				ProjectileProperty = "DamageLow",
-				ChangeValue = 50,
+				ChangeValue = @damage_scale|50@,
 				ChangeType = "Absolute",
 				ExcludeLinked = true,
 				ExtractValue =
@@ -33269,7 +33269,7 @@ TraitData =
 			{
 				WeaponNames = { "FistWeaponLandAreaAttack" },
 				ProjectileProperty = "DamageLow",
-				BaseValue = 90,
+				BaseValue = @damage_scale|90@,
 				ChangeType = "Absolute",
 				ExcludeLinked = true,
 				ExtractValue =
@@ -33364,7 +33364,7 @@ TraitData =
 			{
 				WeaponNames = { "FistNovaWave" },
 				ProjectileProperty = "DamageLow",
-				BaseValue = 80,
+				BaseValue = @damage_scale|80@,
 				ChangeType = "Absolute",
 				ExcludeLinked = true,
 				ExtractValue =
@@ -33456,7 +33456,7 @@ TraitData =
 			{
 				WeaponNames = { "FistWeaponSpecial", "FistWeaponSpecialDash" },
 				ProjectileProperty = "DamageLow",
-				ChangeValue = 40,
+				ChangeValue = @damage_scale|40@,
 				ChangeType = "Absolute",
 				ExcludeLinked = true,
 				ExtractValue =
