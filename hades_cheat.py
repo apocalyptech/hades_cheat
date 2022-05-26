@@ -523,7 +523,14 @@ def main():
             ###
 
             # Default: '25, 50'
-            'keepsake_activations': ActionHardcode('2, 2')
+            'keepsake_activations': ActionHardcode('2, 2'),
+
+            ###
+            ### Charon shoplift opportunity chance
+            ###
+
+            # Default: 0.22
+            'charon_shoplift_chance': ActionHardcode(1),
 
             }
 

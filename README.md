@@ -48,6 +48,7 @@ Currently the script makes the following changes:
 * Fishing is easier (no fake-outs, "perfect" window is doubled)
 * God Mode is improved by 20%
 * Keepsakes level up every 2 encounters (instead of 25 + 50)
+* Mid-level Charon shops will always have shoplifting opportunity
 
 Note that none of that is necessarily exhaustive -- I wouldn't be surprised
 if there are some unbuffed damage values, and various shop items have not
@@ -161,6 +162,7 @@ applied.  Here's the default set:
            godmode_per_death: God Mode from 60% -> 0%, with 30 steps
            godmode_death_cap: God Mode from 60% -> 0%, with 30 steps
         keepsake_activations: Hardcoded to: 2, 2
+      charon_shoplift_chance: Hardcoded to: 1
 
 There are also a couple of shell scripts in the directory which can kick
 off some diffs, just for an easy spot-check of what the util did.  These are
@@ -242,4 +244,5 @@ Changelog
 
 **2022-05-25**:
  * Initial release
+ * Added Charon shoplift chance
 
