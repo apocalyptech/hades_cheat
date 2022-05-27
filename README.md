@@ -242,6 +242,9 @@ redistribution -- perhaps it's covered by Fair Use?
 Changelog
 ---------
 
+**2022-05-27**:
+ * Added in improved elite/hard room rewards for gems/darkness/keys.
+
 **2022-05-26**:
  * Added in damage scaling for the various Daedalus Hammer upgrades which
    had absolute damage values; missed those previously.
