@@ -20,12 +20,12 @@ RoomSetData.Asphodel =
 			RequiredFalseTextLinesThisRun = { "HermesFirstPickUp", "SisyphusFirstMeeting", },
 			RequiredMinRoomsSinceSecretDoor = 8,
 		},
-		ShrinePointDoorCost = 10,
-		ShrinePointDoorSpawnChance = 0.15,
+		ShrinePointDoorCost = @infernal_gate_cost_asphodel|10@,
+		ShrinePointDoorSpawnChance = @infernal_gate_chance|0.15@,
 		ShrinePointDoorRequirements =
 		{
 			RequiredScreenViewed = "ShrineUpgrade",
-			RequiredMinRoomsSinceShrinePointDoor = 8,
+			RequiredMinRoomsSinceShrinePointDoor = @infernal_gate_room_space|8@,
 			RequiredCosmetics = { "ShrinePointGates", },
 		},
 		ChallengeSpawnChance = 0.30,

@@ -532,6 +532,21 @@ def main():
             # Default: 0.22
             'charon_shoplift_chance': ActionHardcode(1),
 
+            ###
+            ### Erebus / Infernal Gate
+            ###
+
+            # Defaults: 5/10/15
+            'infernal_gate_cost_tartarus': ActionHardcode(4),
+            'infernal_gate_cost_asphodel': ActionHardcode(8),
+            'infernal_gate_cost_elysium': ActionHardcode(12),
+
+            # Default: 0.15
+            'infernal_gate_chance': ActionHardcode(0.5),
+
+            # Default: 8
+            'infernal_gate_room_space': ActionHardcode(2),
+
             }
 
     # Eh, fine, support some args.

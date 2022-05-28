@@ -21,12 +21,12 @@ RoomSetData.Tartarus =
 
 			RequiredMinRoomsSinceSecretDoor = 10,
 		},
-		ShrinePointDoorCost = 5,
-		ShrinePointDoorSpawnChance = 0.15,
+		ShrinePointDoorCost = @infernal_gate_cost_tartarus|5@,
+		ShrinePointDoorSpawnChance = @infernal_gate_chance|0.15@,
 		ShrinePointDoorRequirements =
 		{
 			RequiredScreenViewed = "ShrineUpgrade",
-			RequiredMinRoomsSinceShrinePointDoor = 8,
+			RequiredMinRoomsSinceShrinePointDoor = @infernal_gate_room_space|8@,
 			RequireEncounterCompleted = "EnemyIntroFight01",
 			RequiredCosmetics = { "ShrinePointGates", },
 		},

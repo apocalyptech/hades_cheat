@@ -19,12 +19,12 @@ RoomSetData.Elysium =
 			RequiredFalseTextLinesThisRun = { "HermesFirstPickUp", "SisyphusFirstMeeting", "EurydiceFirstMeeting01_A", "EurydiceFirstMeeting01_B", "EurydiceFirstMeeting01_C", "PatroclusFirstMeeting", "ThanatosFirstAppearance" },
 			RequiredMinRoomsSinceSecretDoor = 8,
 		},
-		ShrinePointDoorCost = 15,
-		ShrinePointDoorSpawnChance = 0.15,
+		ShrinePointDoorCost = @infernal_gate_cost_elysium|15@,
+		ShrinePointDoorSpawnChance = @infernal_gate_chance|0.15@,
 		ShrinePointDoorRequirements =
 		{
 			RequiredScreenViewed = "ShrineUpgrade",
-			RequiredMinRoomsSinceShrinePointDoor = 8,
+			RequiredMinRoomsSinceShrinePointDoor = @infernal_gate_room_space|8@,
 			RequiredCosmetics = { "ShrinePointGates", },
 		},
 		ChallengeSpawnChance = 0.30,
