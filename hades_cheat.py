@@ -247,6 +247,55 @@ class ActionFishingChance(Action):
             case _:
                 raise RuntimeError(f'Unknown Fishing macro name: {name}')
 
+class ActionTartarusEncounters(Action):
+    """
+    Weird little custom action to alter the available encounter sets in
+    the "basic" Tartarus rooms.  My main purpose with this is I wanted
+    a guaranteed Thanatos spawn, since I was tired of missing out on
+    opportunities to finish up his dialogue options (this also held up
+    Hypnos' storyline for awhile as well, since Thanatos is required
+    for much of that).
+
+    Anyway, this action's weirder than the others because we're
+    editing a multiline section, and there's no reasonable way to really
+    fit into our "usual" macro set.  So we're hardcoding a bunch of
+    stuff in here.
+
+    When "activated," this will give Thanatos a 50% chance of spawning
+    in any "basic" Tartarus room, which should make him all but
+    guaranteed.  It will also make it so the survive-for-45-sec
+    challenges don't show up.  I personally won't miss those.  :)
+    """
+
+    def __init__(self, use_default=False):
+        super().__init__(use_default)
+        self.indent = "\t"*2
+        self.newline = "\r\n"
+        self.join = ',' + self.newline + self.indent
+        self.defaults = []
+        self.defaults.append(['GeneratedTartarus']*3)
+        self.defaults.append(['GeneratedTartarus']*3 + ['SurvivalTartarus'])
+        self.defaults.append(['GeneratedTartarus']*3 + ['SurvivalTartarus', 'ThanatosTartarus'])
+        self.activated = [['GeneratedTartarus', 'ThanatosTartarus']]
+
+    def _desc(self):
+        return 'Thanatos Tartarus Spawn Chance: 50%'
+
+    def process(self, name, default):
+        """
+        Overriding the default `process()` here, because we're not
+        actually taking a default value from the file itself.
+        """
+        if self.use_default:
+            lines = self.defaults
+        else:
+            lines = self.activated
+        return self.join.join([
+            ', '.join([
+                f'"{encounter}"' for encounter in line
+                ]) for line in lines
+            ])
+
 class TextProcessor:
     """
     ><
@@ -360,6 +409,7 @@ class App:
     """
 
     macro_re = re.compile('^(?P<start>.*)@(?P<name>[a-z_]+)\|(?P<default>.*?)@(?P<end>.*)$')
+    required_macros = {'tartarus_encounters'}
 
     def __init__(self, template_dir, live_dir, changes):
         self.template_dir = template_dir
@@ -401,6 +451,8 @@ class App:
                     end = match.group('end')
                     if name in self.changes:
                         action = self.changes[name]
+                    elif name in self.required_macros:
+                        raise RuntimeError(f'Macro "{name}" is not present in the action list; this is required!')
                     else:
                         print(f' - WARNING: Change key not found, using default: {name}')
                         action = self.default_action
@@ -552,6 +604,12 @@ def main():
             ###
 
             'thanatos_min_spawn_depth': ActionHardcode(1),
+
+            ###
+            ### Tartarus Encounters
+            ###
+
+            'tartarus_encounters': ActionTartarusEncounters(),
 
             }
 
