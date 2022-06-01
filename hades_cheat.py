@@ -547,6 +547,12 @@ def main():
             # Default: 8
             'infernal_gate_room_space': ActionHardcode(2),
 
+            ###
+            ### Thanatos Spawns
+            ###
+
+            'thanatos_min_spawn_depth': ActionHardcode(1),
+
             }
 
     # Eh, fine, support some args.

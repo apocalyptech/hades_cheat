@@ -51,6 +51,7 @@ Currently the script makes the following changes:
 * Mid-level Charon shops will always have shoplifting opportunity
 * Infernal Gates cost 4/8/12 (instead of 5/10/15), and will spawn
   much more frequently
+* Thanatos can spawn starting at the very beginning of each zone.
 
 Note that none of that is necessarily exhaustive -- I wouldn't be surprised
 if there are some unbuffed damage values, and various shop items have not
@@ -170,6 +171,7 @@ applied.  Here's the default set:
      infernal_gate_cost_elysium: Hardcoded to: 12
            infernal_gate_chance: Hardcoded to: 0.5
        infernal_gate_room_space: Hardcoded to: 2
+       thanatos_min_spawn_depth: Hardcoded to: 1
 
 There are also a couple of shell scripts in the directory which can kick
 off some diffs, just for an easy spot-check of what the util did.  These are
@@ -248,6 +250,9 @@ redistribution -- perhaps it's covered by Fair Use?
 
 Changelog
 ---------
+
+**2022-06-01**:
+ * Added Thanatos spawn tweaks
 
 **2022-05-28**:
  * Added in Infernal Gate tweaks

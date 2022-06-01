@@ -1023,7 +1023,7 @@ EncounterData =
 		MaxTimeSincePlayerDamage = 5,
 		MaxThanatosSpawnsThisRun = 1,
 		RequiredMinCompletedRuns = 1,
-		RequiredMinBiomeDepth = 3,
+		RequiredMinBiomeDepth = @thanatos_min_spawn_depth|3@,
 
 		ThanatosKills = 0,
 		PlayerKills = 0,
@@ -1059,7 +1059,7 @@ EncounterData =
 		EnemySet = EnemySets.EnemiesBiome1Thanatos,
 		ActiveEnemyCapBase = 7,
 
-		RequiredMinBiomeDepth = 9,
+		RequiredMinBiomeDepth = @thanatos_min_spawn_depth|9@,
 
 		HardEncounterOverrideValues =
 		{
@@ -1080,7 +1080,7 @@ EncounterData =
 		EnemySet = EnemySets.EnemiesBiome2Thanatos,
 		ActiveEnemyCapBase = 8,
 
-		RequiredMinBiomeDepth = 2,
+		RequiredMinBiomeDepth = @thanatos_min_spawn_depth|2@,
 
 		HardEncounterOverrideValues =
 		{
@@ -1098,7 +1098,7 @@ EncounterData =
 		MinWaves = 3,
 		MaxWaves = 3,
 
-		RequiredMinBiomeDepth = 3,
+		RequiredMinBiomeDepth = @thanatos_min_spawn_depth|3@,
 
 		-- run rollout prereqs
 		RequiredFalseTextLinesThisRun = { "SisyphusFirstMeeting", "EurydiceFirstMeeting01_A", "EurydiceFirstMeeting01_B", "EurydiceFirstMeeting01_C", "PatroclusFirstMeeting" },
