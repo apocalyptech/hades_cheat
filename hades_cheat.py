@@ -261,7 +261,7 @@ class ActionTartarusEncounters(Action):
     fit into our "usual" macro set.  So we're hardcoding a bunch of
     stuff in here.
 
-    When "activated," this will give Thanatos a 50% chance of spawning
+    When "activated," this will give Thanatos a 75% chance of spawning
     in any "basic" Tartarus room, which should make him all but
     guaranteed.  It will also make it so the survive-for-45-sec
     challenges don't show up.  I personally won't miss those.  :)
@@ -276,10 +276,10 @@ class ActionTartarusEncounters(Action):
         self.defaults.append(['GeneratedTartarus']*3)
         self.defaults.append(['GeneratedTartarus']*3 + ['SurvivalTartarus'])
         self.defaults.append(['GeneratedTartarus']*3 + ['SurvivalTartarus', 'ThanatosTartarus'])
-        self.activated = [['GeneratedTartarus', 'ThanatosTartarus']]
+        self.activated = [['GeneratedTartarus'] + ['ThanatosTartarus']*3]
 
     def _desc(self):
-        return 'Thanatos Tartarus Spawn Chance: 50%'
+        return 'Thanatos Tartarus Spawn Chance: 75%'
 
     def process(self, name, default):
         """

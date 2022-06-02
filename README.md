@@ -52,7 +52,7 @@ Currently the script makes the following changes:
 * Infernal Gates cost 4/8/12 (instead of 5/10/15), and will spawn
   much more frequently
 * Thanatos can spawn starting at the very beginning of each zone, and
-  will have a 50% chance of spawning in any "basic" Tartarus room.
+  will have a 75% chance of spawning in any "basic" Tartarus room.
   (He'll still only spawn once per run, though.)
 
 Note that none of that is necessarily exhaustive -- I wouldn't be surprised
@@ -174,7 +174,7 @@ applied.  Here's the default set:
            infernal_gate_chance: Hardcoded to: 0.5
        infernal_gate_room_space: Hardcoded to: 2
        thanatos_min_spawn_depth: Hardcoded to: 1
-            tartarus_encounters: Thanatos Tartarus Spawn Chance: 50%
+            tartarus_encounters: Thanatos Tartarus Spawn Chance: 75%
 
 There are also a couple of shell scripts in the directory which can kick
 off some diffs, just for an easy spot-check of what the util did.  These are
