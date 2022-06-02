@@ -1184,7 +1184,7 @@ RoomSetData.Asphodel =
 		InheritFrom = { "BaseAsphodel" },
 		ForcedReward = "Story",
 		NoReroll = true,
-		@euridice_placement|@MaxCreationsThisRun = 1,
+		@eurydice_placement|@MaxCreationsThisRun = 1,
 
 		RichPresence = "#RichPresence_BStory01",
 
@@ -1193,7 +1193,7 @@ RoomSetData.Asphodel =
 			-- run rollout prereqs
 			RequiredFalseTextLinesThisRun = { "HermesFirstPickUp", "SisyphusFirstMeeting", "Fury2FirstAppearance", "Fury3FirstAppearance" },
 			RequiredFalseTextLinesLastRun = { "OrpheusAboutSingersReunionQuest01" },
-			RequiredMinBiomeDepth = @euridice_placement_req|2@,
+			RequiredMinBiomeDepth = @eurydice_placement_req|2@,
 			RequiredMinCompletedRuns = 1,
 			RequiredSeenRooms = { "B_Boss01" },
 		},

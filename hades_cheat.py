@@ -642,15 +642,15 @@ def main():
             ###
             ### Encounter Placements
             ### For encounters which aren't already forced (such as Sisyphus,
-            ### Euridce, and Patroclus), we need two macros -- one to add the
+            ### Eurydce, and Patroclus), we need two macros -- one to add the
             ### forced-placement statements, and another to alter the biome
             ### depth requirement.
             ###
 
             'sisyphus_placement': ActionForceBiomeDepth(0, use_default=True),
             'sisyphus_placement_req': ActionHardcode(0, use_default=True),
-            'euridice_placement': ActionForceBiomeDepth(2, use_default=True),
-            'euridice_placement_req': ActionHardcode(2, use_default=True),
+            'eurydice_placement': ActionForceBiomeDepth(2, use_default=True),
+            'eurydice_placement_req': ActionHardcode(2, use_default=True),
             'patroclus_placement': ActionForceBiomeDepth(2, use_default=True),
             'patroclus_placement_req': ActionHardcode(2, use_default=True),
             'asterius_placement': ActionHardcode(3, use_default=True),

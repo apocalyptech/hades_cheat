@@ -59,7 +59,7 @@ It's also got support for the following, though they're disabled by default
 and would require some script tweaking to activate:
 
 * Increasing base player health by a bit
-* Force "story" rooms (Sisyphus, Euridice, Patroclus) and Asterius miniboss
+* Force "story" rooms (Sisyphus, Eurydice, Patroclus) and Asterius miniboss
   to appear near the beginning of each area
 * Shorten room count considerably in each area
 
@@ -185,8 +185,8 @@ applied.  Here's the default set:
             tartarus_encounters: Thanatos Tartarus Spawn Chance: 75%
              sisyphus_placement: Forcing Biome Depth to: 0 (disabled, using defaults)
          sisyphus_placement_req: Hardcoded to: 0 (disabled, using defaults)
-             euridice_placement: Forcing Biome Depth to: 2 (disabled, using defaults)
-         euridice_placement_req: Hardcoded to: 2 (disabled, using defaults)
+             eurydice_placement: Forcing Biome Depth to: 2 (disabled, using defaults)
+         eurydice_placement_req: Hardcoded to: 2 (disabled, using defaults)
             patroclus_placement: Forcing Biome Depth to: 2 (disabled, using defaults)
         patroclus_placement_req: Hardcoded to: 2 (disabled, using defaults)
              asterius_placement: Hardcoded to: 3 (disabled, using defaults)
