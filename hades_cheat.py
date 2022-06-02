@@ -267,10 +267,10 @@ class ActionTartarusEncounters(Action):
     challenges don't show up.  I personally won't miss those.  :)
     """
 
-    def __init__(self, use_default=False):
+    def __init__(self, indent="\t\t", newline="\r\n", use_default=False):
         super().__init__(use_default)
-        self.indent = "\t"*2
-        self.newline = "\r\n"
+        self.indent = indent
+        self.newline = newline
         self.join = ',' + self.newline + self.indent
         self.defaults = []
         self.defaults.append(['GeneratedTartarus']*3)
@@ -294,6 +294,34 @@ class ActionTartarusEncounters(Action):
             ', '.join([
                 f'"{encounter}"' for encounter in line
                 ]) for line in lines
+            ])
+
+class ActionForceBiomeDepth(Action):
+    """
+    Action which injects new `ForceAtBiomeDepthMin` and `ForceAtBiomeDepthMax`
+    lines, to force specific rooms to appear at certain points.  Note that
+    forcing a room *early* seems inconsistent.  If you set a room to be forced
+    at position 1, it'll *sometimes* occur before even the level intro area.
+    But other times it'll work fine (be the "first" room after the intro).
+    No clue, but I wouldn't recommend setting it to anything lower than 2 for
+    Asophdel or Elysium.  0 will get you to "first room" for Tartarus, though.
+    """
+
+    def __init__(self, depth, indent="\t\t", newline="\r\n", use_default=False):
+        super().__init__(use_default)
+        self.depth = depth
+        self.indent = indent
+        self.newline = newline
+        self.join = ',' + self.newline + self.indent
+
+    def _desc(self):
+        return f'Forcing Biome Depth to: {self.depth}'
+
+    def _process(self, name, default):
+        return self.join.join([
+            f'ForceAtBiomeDepthMin = {self.depth}',
+            f'ForceAtBiomeDepthMax = {self.depth}',
+            '',
             ])
 
 class TextProcessor:
@@ -610,6 +638,34 @@ def main():
             ###
 
             'tartarus_encounters': ActionTartarusEncounters(),
+
+            ###
+            ### Encounter Placements
+            ### For encounters which aren't already forced (such as Sisyphus,
+            ### Euridce, and Patroclus), we need two macros -- one to add the
+            ### forced-placement statements, and another to alter the biome
+            ### depth requirement.
+            ###
+
+            'sisyphus_placement': ActionForceBiomeDepth(0, use_default=True),
+            'sisyphus_placement_req': ActionHardcode(0, use_default=True),
+            'euridice_placement': ActionForceBiomeDepth(2, use_default=True),
+            'euridice_placement_req': ActionHardcode(2, use_default=True),
+            'patroclus_placement': ActionForceBiomeDepth(2, use_default=True),
+            'patroclus_placement_req': ActionHardcode(2, use_default=True),
+            'asterius_placement': ActionHardcode(3, use_default=True),
+
+            ###
+            ### Shortened run lengths
+            ###
+
+            'tartarus_end_depth': ActionHardcode(5, use_default=True),
+            'asphodel_end_depth': ActionHardcode(3, use_default=True),
+            'elysium_end_depth': ActionHardcode(4, use_default=True),
+
+            # These aren't hardcodes, just allowing it to show up earlier
+            'styx_min_wing_end_depth': ActionHardcode(1, use_default=True),
+            'styx_min_end_depth': ActionHardcode(3, use_default=True),
 
             }
 

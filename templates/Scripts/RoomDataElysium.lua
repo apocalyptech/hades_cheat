@@ -314,8 +314,8 @@ RoomSetData.Elysium =
 		ZoomFraction = 0.92,
 
 		LinkedRoom = "C_Boss01",
-		ForceAtBiomeDepthMin = 9,
-		ForceAtBiomeDepthMax = 9,
+		ForceAtBiomeDepthMin = @elysium_end_depth|9@,
+		ForceAtBiomeDepthMax = @elysium_end_depth|9@,
 		ExitAmbience = "/Ambience/TheseusCrowdAmbientLoop",
 
 		GameStateRequirements =
@@ -851,8 +851,8 @@ RoomSetData.Elysium =
 		ResetBinksOnExit = true,
 
 		MaxCreationsThisRun = 1,
-		ForceAtBiomeDepthMin = 4,
-		ForceAtBiomeDepthMax = 7,
+		ForceAtBiomeDepthMin = @asterius_placement|4@,
+		ForceAtBiomeDepthMax = @asterius_placement|7@,
 		MaxAppearancesThisBiome = 1,
 		NumExits = 1,
 		EntranceDirection = "Right",
@@ -1208,11 +1208,11 @@ RoomSetData.Elysium =
 		ForcedReward = "Story",
 		NoReroll = true,
 		MaxCreationsThisRun = 1,
-		RichPresence = "#RichPresence_CStory01",
+		@patroclus_placement|@RichPresence = "#RichPresence_CStory01",
 
 		GameStateRequirements =
 		{
-			RequiredMinBiomeDepth = 3,
+			RequiredMinBiomeDepth = @patroclus_placement_req|3@,
 			RequiredMinCompletedRuns = 1,
 			RequiredSeenRooms = { "C_Boss01" },
 			-- run rollout prereqs

@@ -139,8 +139,8 @@ RoomSetData.Tartarus =
 		InheritFrom = { "BaseTartarus" },
 
 		LinkedRooms = { "A_Boss01", "A_Boss02", "A_Boss03" },
-		ForceAtBiomeDepthMin = 11,
-		ForceAtBiomeDepthMax = 11,
+		ForceAtBiomeDepthMin = @tartarus_end_depth|11@,
+		ForceAtBiomeDepthMax = @tartarus_end_depth|11@,
 
 		GameStateRequirements =
 		{
@@ -2423,11 +2423,11 @@ RoomSetData.Tartarus =
 		ForcedReward = "Story",
 		NoReroll = true,
 		MaxCreationsThisRun = 1,
-		RichPresence = "#RichPresence_AStory01",
+		@sisyphus_placement|@RichPresence = "#RichPresence_AStory01",
 
 		GameStateRequirements =
 		{
-			RequiredMinBiomeDepth = 4,
+			RequiredMinBiomeDepth = @sisyphus_placement_req|4@,
 			RequiredMinCompletedRuns = 1,
 			RequiredSeenRooms = { "A_Boss01" },
 		},

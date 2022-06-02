@@ -352,8 +352,8 @@ RoomSetData.Asphodel =
 			[0] = "B_Boss01", [1] = "B_Boss01", [2] = "B_Boss02", [3] = "B_Boss02", [4] = "B_Boss02"
 		},
 
-		ForceAtBiomeDepthMin = 7,
-		ForceAtBiomeDepthMax = 7,
+		ForceAtBiomeDepthMin = @asphodel_end_depth|7@,
+		ForceAtBiomeDepthMax = @asphodel_end_depth|7@,
 
 		GameStateRequirements =
 		{
@@ -1184,8 +1184,8 @@ RoomSetData.Asphodel =
 		InheritFrom = { "BaseAsphodel" },
 		ForcedReward = "Story",
 		NoReroll = true,
-		MaxCreationsThisRun = 1,
-		
+		@euridice_placement|@MaxCreationsThisRun = 1,
+
 		RichPresence = "#RichPresence_BStory01",
 
 		GameStateRequirements =
@@ -1193,7 +1193,7 @@ RoomSetData.Asphodel =
 			-- run rollout prereqs
 			RequiredFalseTextLinesThisRun = { "HermesFirstPickUp", "SisyphusFirstMeeting", "Fury2FirstAppearance", "Fury3FirstAppearance" },
 			RequiredFalseTextLinesLastRun = { "OrpheusAboutSingersReunionQuest01" },
-			RequiredMinBiomeDepth = 2,
+			RequiredMinBiomeDepth = @euridice_placement_req|2@,
 			RequiredMinCompletedRuns = 1,
 			RequiredSeenRooms = { "B_Boss01" },
 		},

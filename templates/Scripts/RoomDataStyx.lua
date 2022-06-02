@@ -107,7 +107,7 @@ RoomSetData.Styx =
 
 		GameStateRequirements =
 		{
-			RequiredMinWingDepth = 3,
+			RequiredMinWingDepth = @styx_min_wing_end_depth|3@,
 		},
 
 		MusicSection = 1,
@@ -603,8 +603,8 @@ RoomSetData.Styx =
 
 		GameStateRequirements =
 		{
-			RequiredMinBiomeDepth = 7,
-			RequiredMinWingDepth = 3,
+			RequiredMinBiomeDepth = @styx_min_end_depth|7@,
+			RequiredMinWingDepth = @styx_min_wing_end_depth|3@,
 		},
 
 		SecretMusic = "/Music/BlankMusicCue",

@@ -55,6 +55,14 @@ Currently the script makes the following changes:
   will have a 75% chance of spawning in any "basic" Tartarus room.
   (He'll still only spawn once per run, though.)
 
+It's also got support for the following, though they're disabled by default
+and would require some script tweaking to activate:
+
+* Increasing base player health by a bit
+* Force "story" rooms (Sisyphus, Euridice, Patroclus) and Asterius miniboss
+  to appear near the beginning of each area
+* Shorten room count considerably in each area
+
 Note that none of that is necessarily exhaustive -- I wouldn't be surprised
 if there are some unbuffed damage values, and various shop items have not
 had their prices updated, for instance.
@@ -175,6 +183,18 @@ applied.  Here's the default set:
        infernal_gate_room_space: Hardcoded to: 2
        thanatos_min_spawn_depth: Hardcoded to: 1
             tartarus_encounters: Thanatos Tartarus Spawn Chance: 75%
+             sisyphus_placement: Forcing Biome Depth to: 0 (disabled, using defaults)
+         sisyphus_placement_req: Hardcoded to: 0 (disabled, using defaults)
+             euridice_placement: Forcing Biome Depth to: 2 (disabled, using defaults)
+         euridice_placement_req: Hardcoded to: 2 (disabled, using defaults)
+            patroclus_placement: Forcing Biome Depth to: 2 (disabled, using defaults)
+        patroclus_placement_req: Hardcoded to: 2 (disabled, using defaults)
+             asterius_placement: Hardcoded to: 3 (disabled, using defaults)
+             tartarus_end_depth: Hardcoded to: 5 (disabled, using defaults)
+             asphodel_end_depth: Hardcoded to: 3 (disabled, using defaults)
+              elysium_end_depth: Hardcoded to: 4 (disabled, using defaults)
+        styx_min_wing_end_depth: Hardcoded to: 1 (disabled, using defaults)
+             styx_min_end_depth: Hardcoded to: 3 (disabled, using defaults)
 
 There are also a couple of shell scripts in the directory which can kick
 off some diffs, just for an easy spot-check of what the util did.  These are
@@ -253,6 +273,10 @@ redistribution -- perhaps it's covered by Fair Use?
 
 Changelog
 ---------
+
+**2022-06-02**:
+ * Added forcing story encounter (+ Asterius) room placement
+ * Added shortening room count for each level
 
 **2022-06-01**:
  * Added Thanatos spawn tweaks
