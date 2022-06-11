@@ -106,7 +106,7 @@ Usage
 
 Running the script with `-h` or `--help` will show you the syntax:
 
-    usage: hades_cheat.py [-h] [-t TEMPLATE_DIR] [-d DEST_DIR] [-l]
+    usage: hades_cheat.py [-h] [-t TEMPLATE_DIR] [-d DEST_DIR] [-l] [--defaults]
 
     Hades Cheat Injector
 
@@ -120,6 +120,8 @@ Running the script with `-h` or `--help` will show you the syntax:
                             (default: /games/Steam/steamapps/common/Hades/Content)
       -l, --list-changes    Instead of processing, show the macro changes we'd
                             apply (default: False)
+      --defaults            Use game defaults instead of applying cheats (default:
+                            False)
 
 The default `templates` dir for the templates is included in this
 repo; you'll almost certainly have to specify the game's `Content` directory
@@ -195,6 +197,10 @@ applied.  Here's the default set:
               elysium_end_depth: Hardcoded to: 4 (disabled, using defaults)
         styx_min_wing_end_depth: Hardcoded to: 1 (disabled, using defaults)
              styx_min_end_depth: Hardcoded to: 3 (disabled, using defaults)
+
+The `--defaults` option can be used to revert the scripts back to their
+original, default configuration, in case you'd like a quick way to disable
+all the cheats.
 
 There are also a couple of shell scripts in the directory which can kick
 off some diffs, just for an easy spot-check of what the util did.  These are
@@ -273,6 +279,9 @@ redistribution -- perhaps it's covered by Fair Use?
 
 Changelog
 ---------
+
+**2022-06-11**:
+ * Added `--defaults` option
 
 **2022-06-02**:
  * Added forcing story encounter (+ Asterius) room placement

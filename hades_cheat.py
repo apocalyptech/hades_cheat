@@ -66,8 +66,8 @@ class Action:
     def _process(self, name, default):
         raise NotImplementedError('Implement this!')
 
-    def process(self, name, default):
-        if self.use_default:
+    def process(self, name, default, use_default=False):
+        if use_default or self.use_default:
             return default
         else:
             return self._process(name, default)
@@ -281,12 +281,12 @@ class ActionTartarusEncounters(Action):
     def _desc(self):
         return 'Thanatos Tartarus Spawn Chance: 75%'
 
-    def process(self, name, default):
+    def process(self, name, default, use_default=False):
         """
         Overriding the default `process()` here, because we're not
         actually taking a default value from the file itself.
         """
-        if self.use_default:
+        if use_default or self.use_default:
             lines = self.defaults
         else:
             lines = self.activated
@@ -445,15 +445,15 @@ class App:
         self.changes = changes
         self.default_action = ActionDefault()
 
-    def process_files(self):
+    def process_files(self, use_defaults=False):
         """
         Process all files in our template dir
         """
         for dirpath, _, filenames in os.walk(self.template_dir):
             for filename in filenames:
-                self.process_file(os.path.join(dirpath, filename)[len(self.template_dir)+1:])
+                self.process_file(os.path.join(dirpath, filename)[len(self.template_dir)+1:], use_defaults)
 
-    def process_file(self, filename):
+    def process_file(self, filename, use_defaults=False):
         """
         Process the specified file -- should be the "base" path+filename
         which can be appended to either the template dir or the "live"
@@ -486,7 +486,7 @@ class App:
                         action = self.default_action
                     tp.write('{}{}{}'.format(
                         start,
-                        action.process(name, default),
+                        action.process(name, default, use_default=use_defaults),
                         end,
                         ))
                 else:
@@ -692,6 +692,11 @@ def main():
             help="Instead of processing, show the macro changes we'd apply",
             )
 
+    parser.add_argument('--defaults',
+            action='store_true',
+            help="Use game defaults instead of applying cheats",
+            )
+
     args = parser.parse_args()
 
     # Run!
@@ -706,7 +711,7 @@ def main():
                 live_dir=args.dest_dir,
                 changes=changes,
                 )
-        app.process_files()
+        app.process_files(args.defaults)
 
 if __name__ == '__main__':
     main()
